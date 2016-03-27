@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 7b8f610e607a5aa4bbc66384b6ee3cbe
+timeCreated: 1458931108
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - flashPoint: {instanceID: 0}
+  - muzzleFlash: {instanceID: 0}
+  - bulletImpact: {instanceID: 0}
+  - explosion: {instanceID: 0}
+  - gameController: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

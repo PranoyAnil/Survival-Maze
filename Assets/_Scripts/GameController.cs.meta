@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 457461dc2f45e5644b2eae7059907b80
+timeCreated: 1458962223
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - LivesLabel: {instanceID: 0}
+  - ScoreLabel: {instanceID: 0}
+  - GameOverLabel: {instanceID: 0}
+  - HighScoreLabel: {instanceID: 0}
+  - RestartButton: {instanceID: 0}
+  - player: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
