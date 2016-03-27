@@ -10,12 +10,13 @@ public class GameController : MonoBehaviour {
 	private int _livesValue;
 
 	private Vector3 _playerSpawnPoint;
+    private Vector3 _blueenemySpawnPoint;
+    private Vector3 _greenenemySpawnPoint;
+    private Vector3 _redenemySpawnPoint;
+    
 
-	//[SerializeField]
-	//private AudioSource _gameOverSound;
-
-	// PUBLIC ACCESS METHODS
-	public int ScoreValue {
+    // PUBLIC ACCESS METHODS
+    public int ScoreValue {
 		get {
 			return this._scoreValue;
 		}
@@ -51,24 +52,34 @@ public class GameController : MonoBehaviour {
 	public Text HighScoreLabel;
 	public Button RestartButton;
 	public GameObject player;
+    public GameObject blueenemy;
+    public GameObject greenenemy;
+    public GameObject redenemy;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		this._initialize ();
 
 		Instantiate (this.player, this._playerSpawnPoint, Quaternion.identity);
-	}
+        Instantiate(this.blueenemy, this._blueenemySpawnPoint, Quaternion.identity);
+        Instantiate(this.greenenemy, this._greenenemySpawnPoint, Quaternion.identity);
+        Instantiate(this.redenemy, this._redenemySpawnPoint, Quaternion.identity);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        
+    }
 
 	//PRIVATE METHODS ++++++++++++++++++
 
 	//Initial Method
 	private void _initialize() {
-		this._playerSpawnPoint = new Vector3 (-74f, 14f, 19f);
+        
+        this._blueenemySpawnPoint = new Vector3(-45f, 17.5f, 45f);
+        this._greenenemySpawnPoint = new Vector3(-65f, 10.5f, 16.5f);
+        this._redenemySpawnPoint = new Vector3(-65f, 10f, 55f);
+        this._playerSpawnPoint = new Vector3 (-74f, 14f, 19f);
 		this.ScoreValue = 0;
 		this.LivesValue = 5;
 		this.GameOverLabel.gameObject.SetActive (false);
@@ -83,7 +94,6 @@ public class GameController : MonoBehaviour {
 		this.HighScoreLabel.gameObject.SetActive (true);
 		this.LivesLabel.gameObject.SetActive (false);
 		this.ScoreLabel.gameObject.SetActive (false);
-		//this._gameOverSound.Play ();
 		this.RestartButton.gameObject.SetActive (true);
 	}
 

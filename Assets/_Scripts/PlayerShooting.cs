@@ -52,6 +52,7 @@ public class PlayerShooting : MonoBehaviour
                 else {
 
                     //Instantiate(this.bulletImpact, hit.point, Quaternion.identity);
+
                 }
 
 
@@ -60,4 +61,5 @@ public class PlayerShooting : MonoBehaviour
 
         } // end if
     } // end FixedUpdate
+    
 }

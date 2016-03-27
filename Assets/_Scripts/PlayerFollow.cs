@@ -10,10 +10,11 @@ public class PlayerFollow : MonoBehaviour {
 
     private Transform _transform;
     private GameObject _player;
-    
+    private GameController _gameController;
     // Use this for initialization
     void Start () {
         this._transform = gameObject.GetComponent<Transform>();
+        this._gameController = GameObject.FindWithTag("GameController").GetComponent("GameController") as GameController;
         this._player = GameObject.FindGameObjectWithTag("Player");
       }
 	
@@ -21,25 +22,17 @@ public class PlayerFollow : MonoBehaviour {
 	void Update () {
         
         float step = speed * Time.deltaTime;
-        _transform.position = Vector3.MoveTowards(_transform.position, _player.transform.position, step);
+
+        this._transform.position = Vector3.MoveTowards(this._transform.position, _player.transform.position, step);
     }//end update
+    void OnCollisionEnter(Collision collision)
+    {
 
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    if (transform.gameObject.CompareTag("Enemy"))
-    //    {
-    //        this._gameController.LivesValue -= 1;
-    //    }
-  //  void OnCollisionEnter(Collision collision)
-  //  {
-  //      foreach (ContactPoint contact in collision.contacts)
-  //      {
-  //          Debug.DrawRay(contact.point, contact.normal, Color.white);
-  //      }
-  //      if (collision.relativeVelocity.magnitude > 2)
-  //      { 
-            
+        if (collision.gameObject.tag == "Player")
+        {
+            this._gameController.LivesValue -= 1;
+        }
+    }
+    
 
-  //  }
-  //}
 }
