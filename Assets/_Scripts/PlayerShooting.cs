@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Source file name:PlayerShooting
+    //Author’s name:Pranoy Anil
+    //Last Modified by:Pranoy Anil
+    //Date last Modified:27/3/16 
+    //Program description: Assignment 03
+
 public class PlayerShooting : MonoBehaviour
 {
 

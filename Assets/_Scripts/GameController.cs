@@ -4,6 +4,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 
+//Source file name:GameController
+    //Author’s name:Pranoy Anil
+    //Last Modified by:Pranoy Anil
+    //Date last Modified:27/3/16 
+    //Program description: Assignment 03
+    
 public class GameController : MonoBehaviour {
 	// PRIVATE INSTANCE VARIABLES
 	private int _scoreValue;

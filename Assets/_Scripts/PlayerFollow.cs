@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Source file name:PlayerFollow
+    //Author’s name:Pranoy Anil
+    //Last Modified by:Pranoy Anil
+    //Date last Modified:27/3/16 
+    //Program description: Assignment 03
+
 public class PlayerFollow : MonoBehaviour {
     //PUBLIC VARIABLE
    
